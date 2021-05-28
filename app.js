@@ -22,7 +22,7 @@ let pharse =
 /*////////////////////////////////
         event handlers
 /////////////////////////////////*/
-startgame.addEventListener('click', () =>{
+startgame.addEventListener('click', () => {
     overlay.style.display ='none';
 });
 
@@ -32,9 +32,11 @@ startgame.addEventListener('click', () =>{
 //////////////////////////////////*/
 const getRandomPhrasesAsArray = arr => { //this function chooses random phrases from the array
 }
-function getRandomNumber () {
-    return Math.floor(Math.random()* 5);
+const getRandomNumber = () => {
+    const randmNumber = Math.floor (Math.random()* 5) +1;
+    return randmNumber;
 }
+
 let counter = 0;
 while (counter < 5) {
     console.log('The random number is ${getRandomNumber(5)}');
