@@ -1,10 +1,10 @@
 /*/////////////////////////////////////
         Added needed variables
 ////////////////////////////////////*/
-const keyboard = document.getElementById('#qwerty')
-const phrase = document.getElementById('#phrase')
-const startgame = document.getElementsByClassName('.btn__reset')
-const overlay = document.getElementById('#overlay'); //hide screen overlay
+const keyboard = document.getElementById('qwerty')
+const phrase = document.getElementById('phrase')
+const startgame[0] = document.getElementsByClassName('btn__reset')
+const overlay = document.getElementById('overlay'); //hide screen overlay
 var missed = 0;
 
 
