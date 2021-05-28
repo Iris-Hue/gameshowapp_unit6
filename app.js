@@ -1,29 +1,30 @@
 /*/////////////////////////////////////
         Added needed variables
 ////////////////////////////////////*/
-const keyboard = document.getElementById('qwerty')
-const phrase = document.getElementById('phrase')
-const startgame = document.getElementsByClassName('btn__reset')
-const overlay = document.getElementById('overlay'); //hide screen overlay
+const keyboard = document.getElementById('#qwerty')
+const phrase = document.getElementById('#phrase')
+const startgame = document.getElementsByClassName('.btn__reset')
+const overlay = document.getElementById('#overlay'); //hide screen overlay
 var missed = 0;
 
 
 /*/////////////////////////////////
     create array of name of pharses
 ////////////////////////////////*/
-let pharse =
-    ['big hearted',
+let pharse = [
+    'big hearted',
     'life grows on',
     'avid gamer',
     'men in black',
-    'island hopping'];
+    'island hopping'
+];
 
 
 /*////////////////////////////////
         event handlers
 /////////////////////////////////*/
 startgame.addEventListener('click', () => {
-    overlay.style.display ='none';
+    overlay.style.display ='none';      //hide startscreen
 });
 
 
