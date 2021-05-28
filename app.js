@@ -1,17 +1,16 @@
 /*/////////////////////////////////////
         Added needed variables
 ////////////////////////////////////*/
-
 const keyboard = document.getElementById('qwerty')
 const phrase = document.getElementById('phrase')
 const startgame = document.getElementsByClassName('btn__reset')
-const overlay = document.getElementById('overlay');
-var missed = 0; //hide screen overlay
+const overlay = document.getElementById('overlay'); //hide screen overlay
+var missed = 0;
+
 
 /*/////////////////////////////////
     create array of name of pharses
 ////////////////////////////////*/
-
 let pharse =
     ['big hearted',
     'life grows on',
@@ -23,8 +22,21 @@ let pharse =
 /*////////////////////////////////
         event handlers
 /////////////////////////////////*/
-
-
-overlay.addEventListener('click',() = > {
-    if(overlay.style.display = ='none'){
+startgame.addEventListener('click', () =>{
+    overlay.style.display ='none';
 });
+
+
+/*/////////////////////////////////
+        function for random pharses
+//////////////////////////////////*/
+const getRandomPhrasesAsArray = arr => { //this function chooses random phrases from the array
+}
+function getRandomNumber () {
+    return Math.floor(Math.random()* 5);
+}
+let counter = 0;
+while (counter < 5) {
+    console.log('The random number is ${getRandomNumber(5)}');
+    counter += 1;
+}
