@@ -34,14 +34,23 @@ const getRandomNumber = () => {
     return randomNumber;
 }
 const getRandomPhraseAsArray = arr => {
-let randomPhrase = arr [getRandomNumber()];
-return randomPhrase }
-chars charactors = 'randonPhrase', toCharArray();
+let randomPhrase = arr[getRandomNumber()];
+return phraseArray = randomPhrase.split([,]);  /*split charactors */
+ }
+const newPhraseArray = getRandomPhraseAsArray(pharses);
 
-
-
-
-/*let counter = 0;
-while (counter < 5) {
-counter += 1;
-} */
+/*//////////////////////////////////////
+        function to display charactors
+//////////////////////////////////////*/
+const addPhraseToDisplay = arr => {
+    let ul = document.getElementsByTagName('ul')[0];
+    ul.appendChild(li);
+    const lis = #phrases;
+for (let i = 0; i<lis.length; i+= 1) {
+let li = lis [i];
+if(li = 'letter') {
+    li.style.display = 'letter';
+}else{
+    li.display = 'space';
+}
+}
