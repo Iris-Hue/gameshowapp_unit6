@@ -38,10 +38,8 @@ const getRandomNumber = () => {
 }
 const getRandomPhraseAsArray = arr => {
 let randomPhrase = arr [getRandomNumber()];
-return randomPhrase;
-}
-/*const chars = string.split('');
-return pharses;*/
+return randomPhrase }
+chars [] charactors = 'randonPhrase', toCharArray(); 
 
 
 
