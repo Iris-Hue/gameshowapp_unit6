@@ -7,7 +7,6 @@ const startgame = document.getElementsByClassName('btn__reset')
 const overlay = document.getElementById('overlay'); //hide screen overlay
 var missed = 0;
 
-
 /*/////////////////////////////////
     create array of name of pharses
 ////////////////////////////////*/
@@ -19,14 +18,12 @@ let pharses = [
     'island hopping'
 ];
 
-
 /*////////////////////////////////
         event handlers
 /////////////////////////////////*/
 startgame[0].addEventListener('click', () => {
     overlay.style.display ='none';      //hide startscreen
 });
-
 
 /*/////////////////////////////////
         function for random pharses
@@ -39,7 +36,7 @@ const getRandomNumber = () => {
 const getRandomPhraseAsArray = arr => {
 let randomPhrase = arr [getRandomNumber()];
 return randomPhrase }
-chars [] charactors = 'randonPhrase', toCharArray(); 
+chars charactors = 'randonPhrase', toCharArray();
 
 
 
