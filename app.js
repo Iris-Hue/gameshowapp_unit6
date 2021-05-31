@@ -41,22 +41,26 @@ return phraseArray = randomPhrase.split([,]);  /*split charactors */
  }
 const newPhraseArray = getRandomPhraseAsArray(phrases);
 
+
 /*//////////////////////////////////////
         function to display charactors
 //////////////////////////////////////*/
-const addPhraseToDisplay = arr => {
+function addPhraseToDisplay (arr) {
+    /*Note to self... and add to #phrase ul????*/
+
     var getRandomPhraseAsArray = (addPhraseToDisplay);
-    let ul = document.getElementsByTagName('ul');
+    let ul = document.getElementsByTagName('ul')[0];
     ul.textContent = phrases.value;
     ul.appendChild(li);
+    Phrases.value = ''; /*to clear the input field after each entry*/
     const lis = phrases;
-for (let i = 0; i<lis.length; i+= 1) { /* create a loop for each letter in the phrases*/
+for (let i = 0; i < lis.length; i+= 1) { /* create a loop for each letter in the phrases*/
 let li = lis [i];
 if(li = 'letter') { /*if correct letter will display letter*/
     li.style.display = 'letter';
 }else{ /* if a space display none*/
     li.display = 'none';
-    return (addPhraseToDisplay);
+    return addPhraseToDisplay (PhraseArray);
 }
 }
-};
+}
