@@ -5,12 +5,14 @@ const keyboard = document.getElementById('qwerty')
 const phrase = document.getElementById('phrase')
 const startgame = document.getElementsByClassName('btn__reset')
 const overlay = document.getElementById('overlay'); //hide screen overlay
+const li = document.createElement('li');
+
 var missed = 0;
 
 /*/////////////////////////////////
     create array of name of pharses
 ////////////////////////////////*/
-let pharses = [
+let phrases = [
     'big hearted',
     'life grows on',
     'avid gamer',
@@ -30,27 +32,31 @@ startgame[0].addEventListener('click', () => {
 //////////////////////////////////*/
 
 const getRandomNumber = () => {
-    const randomNumber = Math.floor (Math.random()* pharses.length);
+    const randomNumber = Math.floor (Math.random()* phrases.length);
     return randomNumber;
 }
 const getRandomPhraseAsArray = arr => {
 let randomPhrase = arr[getRandomNumber()];
 return phraseArray = randomPhrase.split([,]);  /*split charactors */
  }
-const newPhraseArray = getRandomPhraseAsArray(pharses);
+const newPhraseArray = getRandomPhraseAsArray(phrases);
 
 /*//////////////////////////////////////
         function to display charactors
 //////////////////////////////////////*/
 const addPhraseToDisplay = arr => {
-    let ul = document.getElementsByTagName('ul')[0];
+    var getRandomPhraseAsArray = (addPhraseToDisplay);
+    let ul = document.getElementsByTagName('ul');
+    ul.textContent = phrases.value;
     ul.appendChild(li);
-    const lis = #phrases;
-for (let i = 0; i<lis.length; i+= 1) {
+    const lis = phrases;
+for (let i = 0; i<lis.length; i+= 1) { /* create a loop for each letter in the phrases*/
 let li = lis [i];
-if(li = 'letter') {
+if(li = 'letter') { /*if correct letter will display letter*/
     li.style.display = 'letter';
-}else{
-    li.display = 'space';
+}else{ /* if a space display none*/
+    li.display = 'none';
+    return (addPhraseToDisplay);
 }
 }
+};
