@@ -46,9 +46,8 @@ const newPhraseArray = getRandomPhraseAsArray(phrases);
         function to display charactors
 //////////////////////////////////////*/
 function addPhraseToDisplay (arr) {
-    /*Note to self... and add to #phrase ul????*/
-
-    var getRandomPhraseAsArray = (addPhraseToDisplay);
+    /*element.className(#phrase ul);*/
+    const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
     let ul = document.getElementsByTagName('ul')[0];
     ul.textContent = phrases.value;
     ul.appendChild(li);
