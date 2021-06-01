@@ -45,21 +45,39 @@ const newPhraseArray = getRandomPhraseAsArray(phrases);
 /*//////////////////////////////////////
         function to display charactors
 //////////////////////////////////////*/
+const phraseUl = document.querySelector('#phrase ul');
+
 function addPhraseToDisplay (arr) {
-    /*element.className(#phrase ul);*/
-    const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
+    for (let i = 0; i < arr.length; i ++) {
+    const li = document.createElement('li');
+    li.textContent = arr[i];
+    phraseUl.appendChild(li);
+    if (arr[i] === '') {
+    li.classList.add('space');
+}else {
+    li.classList.add('letter');
+}
+}
+}
+addPhraseToDisplay(newPhraseArray);
+
+
+
+
+    /*const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
     let ul = document.getElementsByTagName('ul')[0];
     ul.textContent = phrases.value;
     ul.appendChild(li);
     Phrases.value = ''; /*to clear the input field after each entry*/
-    const lis = phrases;
+/*    const lis = phrases;
 for (let i = 0; i < lis.length; i+= 1) { /* create a loop for each letter in the phrases*/
-let li = lis [i];
+/*let li = lis [i];
 if(li = 'letter') { /*if correct letter will display letter*/
-    li.style.display = 'letter';
+    /*li.style.display = 'letter';
 }else{ /* if a space display none*/
-    li.display = 'none';
+/*    li.display = 'none';
     return addPhraseToDisplay (PhraseArray);
 }
 }
 }
+*/
