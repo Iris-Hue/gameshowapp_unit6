@@ -61,7 +61,20 @@ function addPhraseToDisplay (arr) {
 }
 addPhraseToDisplay(newPhraseArray);
 
+/*////////////////////////////////////////////
+    checkbox function inside an eventlistener
+///////////////////////////////////////////*/
 
+function checkLetter = guessLetterButton => {
+    /* will be used inside event listener */
+    for (let i = 0; i < li.length; i ++);
+    const matchFound = matchFound.value (null);
+    if (matchFound === '') {
+        li.classmatch.add('show');
+        return null;
+
+}
+}
 
 
     /*const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
