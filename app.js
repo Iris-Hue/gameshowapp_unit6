@@ -5,7 +5,7 @@ const keyboard = document.getElementById('qwerty')
 const phrase = document.getElementById('phrase')
 const startgame = document.getElementsByClassName('btn__reset')
 const overlay = document.getElementById('overlay'); //hide screen overlay
-const li = document.createElement('li');
+
 
 var missed = 0;
 
@@ -64,18 +64,18 @@ addPhraseToDisplay(newPhraseArray);
 /*////////////////////////////////////////////
     checkbox function inside an eventlistener
 ///////////////////////////////////////////*/
-
-function checkLetter = guessLetterButton => {
-    /* will be used inside event listener */
-    for (let i = 0; i < li.length; i ++);
-    const matchFound = matchFound.value (null);
-    if (matchFound === '') {
-        li.classmatch.add('show');
-        return null;
+    const letters = document.querySelectorAll('.letter');
+    const checkLetter = (button) => {
+        let matched = null;
+        for (i = 0; i < letters.length; i ++){
+        if (button === letters[i].textContent.toLowerCase()) {
+            letters[i].classlist.add('show');
+            matched = true;
 
 }
 }
-
+    return matched;
+}
 
     /*const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
     let ul = document.getElementsByTagName('ul')[0];
