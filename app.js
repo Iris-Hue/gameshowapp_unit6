@@ -52,7 +52,7 @@ function addPhraseToDisplay (arr) {
     const li = document.createElement('li');
     li.textContent = arr[i];
     phraseUl.appendChild(li);
-    if (arr[i] === '') {
+    if (arr[i] === ' ') {
     li.classList.add('space');
 }else {
     li.classList.add('letter');
