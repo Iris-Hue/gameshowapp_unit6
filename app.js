@@ -28,7 +28,7 @@ startgame[0].addEventListener('click', () => { //start game
 });
 keyboard.addEventListener('click', (e) => {
     if(e.target.tagName ==='BUTTON') {
-    e.target.className = 'chosen'
+    e.target.className = 'chosen';
     e.target.disable = true;
 }});
 
@@ -83,4 +83,9 @@ addPhraseToDisplay(newPhraseArray);
 /*///////////////////////////////////////
         conditional to filter out clicks
 ///////////////////////////////////////*/
-const letterFound = checkLetter;
+const letterFound = matched => {
+    const removeHeart = document.createElement('button');
+    removeHeart.images/liveHeart.png = 'remove'
+    li.appendChild(removeHeart);
+
+}
