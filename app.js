@@ -17,15 +17,20 @@ let phrases = [
     'life grows on',
     'avid gamer',
     'men in black',
-    'island hopping'
+    'refactoring'
 ];
 
 /*////////////////////////////////
         event handlers
 /////////////////////////////////*/
-startgame[0].addEventListener('click', () => {
+startgame[0].addEventListener('click', () => { //start game
     overlay.style.display ='none';      //hide startscreen
 });
+keyboard.addEventListener('click', (e) => {
+    if(e.target.tagName ==='BUTTON') {
+    e.target.className = 'chosen'
+    e.target.disable = true;
+}});
 
 /*/////////////////////////////////
         function for random pharses
@@ -71,26 +76,11 @@ addPhraseToDisplay(newPhraseArray);
         if (button === letters[i].textContent.toLowerCase()) {
             letters[i].classlist.add('show');
             matched = true;
-
 }
 }
     return matched;
 }
-
-    /*const phraseArray = getRandomPhraseAsArray(pharses);  addPhraseToDisplay(phraseArray);
-    let ul = document.getElementsByTagName('ul')[0];
-    ul.textContent = phrases.value;
-    ul.appendChild(li);
-    Phrases.value = ''; /*to clear the input field after each entry*/
-/*    const lis = phrases;
-for (let i = 0; i < lis.length; i+= 1) { /* create a loop for each letter in the phrases*/
-/*let li = lis [i];
-if(li = 'letter') { /*if correct letter will display letter*/
-    /*li.style.display = 'letter';
-}else{ /* if a space display none*/
-/*    li.display = 'none';
-    return addPhraseToDisplay (PhraseArray);
-}
-}
-}
-*/
+/*///////////////////////////////////////
+        conditional to filter out clicks
+///////////////////////////////////////*/
+const letterFound = checkLetter;
