@@ -26,11 +26,7 @@ let phrases = [
 startgame[0].addEventListener('click', () => { //start game
     overlay.style.display ='none';      //hide startscreen
 });
-keyboard.addEventListener('click', (e) => {
-    if(e.target.tagName ==='BUTTON') {
-    e.target.className = 'chosen';
-    e.target.disabled = true;
-}});
+
 
 /*/////////////////////////////////
         function for random pharses
@@ -84,9 +80,17 @@ addPhraseToDisplay(newPhraseArray);
         conditional to filter out clicks
 ///////////////////////////////////////*/
 const liveHeart = document.querySelectorAll('.tries img');
-const foundLetter = checkLetter(e.target.textContent.toLowerCase());
-if (foundLetter === null) {
+keyboard.addEventListener('click', e => {
+    if(e.target.tagName ==='BUTTON') {
+    e.target.className = 'chosen';
+    e.target.disabled = true;
+}});
+
+const match = checkLetter(e.target.textContent.toLowerCase());
+if (match === null) {
     liveHeart[missed].src = 'images/lostHeart.png';
     missed++;
 }
 checkWin();
+
+reset();
