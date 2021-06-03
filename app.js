@@ -83,9 +83,8 @@ addPhraseToDisplay(newPhraseArray);
 /*///////////////////////////////////////
         conditional to filter out clicks
 ///////////////////////////////////////*/
-const letterFound = matched => {
-    const removeHeart = document.createElement('button');
-    removeHeart.images/liveHeart.png = 'remove'
-    li.appendChild(removeHeart);
-
+const match = checkLetter(e.target.textContent.toLowerCase());
+if (match) === null) {
+    liveHeart[missed].src = 'images/lostHeart.png';
+    missed++;
 }
