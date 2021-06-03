@@ -70,7 +70,7 @@ addPhraseToDisplay(newPhraseArray);
         let matched = null;
         for (i = 0; i < letters.length; i ++){
         if (button === letters[i].textContent.toLowerCase()) {
-            letters[i].classlist.add('show');
+            letters[i].classList.add('show');
             matched = true;
 }
 }
@@ -84,7 +84,7 @@ keyboard.addEventListener('click', e => {
     if(e.target.tagName ==='BUTTON') {
     e.target.className = 'chosen';
     e.target.disabled = true;
-}});
+
 
 const match = checkLetter(e.target.textContent.toLowerCase());
 if (match === null) {
@@ -92,5 +92,27 @@ if (match === null) {
     missed++;
 }
 checkWin();
+}
+});
 
-reset();
+/*/////////////////////////////////////////
+        create checkwin function
+/////////////////////////////////////////*/
+function checkWin () {
+const showLetter = document.getElementsByClassName('show');
+const matchLetter = document.getElementsByClassName('letter');
+const headLineTitle = document.getElementById ('headLine');
+
+if (showLetter.length === matchLetter.length) {
+     overlay.className = 'win';
+     headLineTitle.textContent = 'Congratulations You Won!!'
+     overlay.style.display = 'flex';
+
+}else if {
+    for (let i =0; i< match.length; < 5)
+    overly.className = 'lose';
+    headLineTitle.textContent = 'So Sorry try again';
+    overlay.style.display = 'flex';
+}
+gameReset();
+}
