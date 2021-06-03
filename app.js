@@ -29,7 +29,7 @@ startgame[0].addEventListener('click', () => { //start game
 keyboard.addEventListener('click', (e) => {
     if(e.target.tagName ==='BUTTON') {
     e.target.className = 'chosen';
-    e.target.disable = true;
+    e.target.disabled = true;
 }});
 
 /*/////////////////////////////////
@@ -83,8 +83,10 @@ addPhraseToDisplay(newPhraseArray);
 /*///////////////////////////////////////
         conditional to filter out clicks
 ///////////////////////////////////////*/
-const match = checkLetter(e.target.textContent.toLowerCase());
-if (match) === null) {
+const liveHeart = document.querySelectorAll('.tries img');
+const foundLetter = checkLetter(e.target.textContent.toLowerCase());
+if (foundLetter === null) {
     liveHeart[missed].src = 'images/lostHeart.png';
     missed++;
 }
+checkWin();
