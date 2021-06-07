@@ -100,7 +100,7 @@ checkWin();
 /////////////////////////////////////////*/
 function checkWin () {
 const showLetter = document.getElementsByClassName('show');
-let message = document.getElementById('title');
+let message = document.querySelector('.title');
 
 if (showLetter.length === letters.length) {
      overlay.className = "win";
