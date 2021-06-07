@@ -68,7 +68,7 @@ addPhraseToDisplay(newPhraseArray);
     const letters = document.querySelectorAll('.letter');
     const checkLetter = (button) => {
         let matched = null;
-        for (i = 0; i < letters.length; i ++){
+        for (i = 0; i < letters.length; i++){
         if (button === letters[i].textContent.toLowerCase()) {
             letters[i].classList.add('show');
             matched = true;
@@ -81,7 +81,7 @@ addPhraseToDisplay(newPhraseArray);
 ///////////////////////////////////////*/
 const liveHeart = document.querySelectorAll('.tries img');
 keyboard.addEventListener('click', e => {
-    if(e.target.tagName ==='BUTTON') {
+    if (e.target.tagName === 'BUTTON') {
     e.target.className = 'chosen';
     e.target.disabled = true;
 
@@ -100,19 +100,17 @@ checkWin();
 /////////////////////////////////////////*/
 function checkWin () {
 const showLetter = document.getElementsByClassName('show');
-const matchLetter = document.getElementsByClassName('letter');
-const headLineTitle = document.getElementById ('headLine');
+let message = document.getElementById('title');
 
-if (showLetter.length === matchLetter.length) {
-     overlay.className = 'win';
-     headLineTitle.textContent = 'Congratulations You Won!!';
+if (showLetter.length === letters.length) {
+     overlay.className = "win";
+     message.textContent = 'Congratulations You Won!!';
      overlay.style.display = 'flex';
 
-}else if (missed <4){
-
-    overlay.className = 'lose';
-    headLineTitle.textContent = 'So Sorry try again';
-    overlay.style.display = 'flex';
+}else if (missed > 4){
+    overlay.className = "lose";
+    message.textContent = 'So Sorry try again';
+    overlay.style.display = "flex";
 }
-gameReset();
+document.querySelector("#overlay .btn__reset").style.display = 'none';
 }
