@@ -105,12 +105,12 @@ const headLineTitle = document.getElementById ('headLine');
 
 if (showLetter.length === matchLetter.length) {
      overlay.className = 'win';
-     headLineTitle.textContent = 'Congratulations You Won!!'
+     headLineTitle.textContent = 'Congratulations You Won!!';
      overlay.style.display = 'flex';
 
-}else if {
-    for (let i =0; i< match.length; < 5)
-    overly.className = 'lose';
+}else if (missed <4){
+
+    overlay.className = 'lose';
     headLineTitle.textContent = 'So Sorry try again';
     overlay.style.display = 'flex';
 }
